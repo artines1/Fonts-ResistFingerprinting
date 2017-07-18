@@ -1,0 +1,6 @@
+[submodule "fonts/noto-fonts"]
+	path = fonts/noto-fonts
+	url = https://github.com/googlei18n/noto-fonts.git
+[submodule "fonts/stix-fonts"]
+	path = fonts/stix-fonts
+	url = https://github.com/Rokt33r/stix-fonts.git
