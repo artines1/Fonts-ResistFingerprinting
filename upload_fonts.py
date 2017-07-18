@@ -38,36 +38,6 @@ FONTS_LIST = (
     ('./fonts/stix-fonts/fonts/STIXMath-Regular.otf', ['macosx'])
 )
 
-PLATFORMS = [
-    'macosx'
-]
-
-FILES_MACOSX = [
-    'fonts/noto-fonts/hinted/NotoSansArmenian-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansBengali-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansDevanagari-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansEthiopic-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansGujarati-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansGurmukhi-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansKannada-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansKhmer-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansLao-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansMalayalam-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansMyanmar-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansOriya-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansSinhala-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansTamil-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansTelugu-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansThaana-Regular.ttf',
-    'fonts/noto-fonts/hinted/NotoSansTibetan-Regular.ttf',
-    'fonts/noto-fonts/unhinted/NotoSansCanadianAboriginal-Regular.ttf',
-    'fonts/noto-fonts/unhinted/NotoSansBuginese-Regular.ttf',
-    'fonts/noto-fonts/unhinted/NotoSansCherokee-Regular.ttf',
-    'fonts/noto-fonts/unhinted/NotoSansMongolian-Regular.ttf',
-    'fonts/noto-fonts/unhinted/NotoSansYi-Regular.ttf',
-    'fonts/stix-fonts/fonts/STIXMath-Regular.otf'
-]
-
 # On some system, the .ttf extension has no associated mimetype.
 mimetypes.add_type("application/x-font-ttf", ".ttf")
 
