@@ -10,7 +10,7 @@ import mimetypes
 import os
 import pprint
 import uuid
-import StringIO
+from six import StringIO
 
 FONTS_LIST = (
     ('./fonts/noto-fonts/hinted/NotoSansArmenian-Regular.ttf', ['macosx', 'linux']),
@@ -114,7 +114,7 @@ def files_to_upload(records, files):
     return to_upload
 
 def compress_content(content):
-    out = StringIO.StringIO()
+    out = StringIO()
     with gzip.GzipFile(fileobj=out, mode="w") as f:
         f.write(content)
     return out.getvalue()
