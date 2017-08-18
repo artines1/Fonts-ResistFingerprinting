@@ -60,7 +60,7 @@ def fetch_records(session, url):
 def files_to_upload(records, files):
     records_by_id = {r['id']: r for r in records if 'attachment' in r}
     to_upload = []
-    for filepath, platform in files:
+    for filepath, platforms in files:
         filename = os.path.basename(filepath)
 
         identifier = hashlib.md5(filename.encode('utf-8')).hexdigest()
@@ -82,7 +82,7 @@ def files_to_upload(records, files):
             else:
                 print("File '%s' is up-to-date." % filename)
         else:
-            record = {'id': record_id, 'platform': platform}
+            record = {'id': record_id, 'platforms': platforms}
             to_upload.append((filepath, record))
 
     # XXX: add option to delete records when files are missing locally
@@ -150,7 +150,7 @@ def upload_files(session, url, files, force):
         filecontent = open(filepath, "rb").read()
 
         attributes = {
-            'platform': record['platform']
+            'platforms': record['platforms']
         }
 
         attachment_uri = '%s/%s/attachment?gzipped=true' % (url, record['id'])
