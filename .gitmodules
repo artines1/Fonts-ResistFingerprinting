@@ -4,3 +4,12 @@
 [submodule "fonts/stix-fonts"]
 	path = fonts/stix-fonts
 	url = https://github.com/Rokt33r/stix-fonts.git
+[submodule "fonts/google-fonts"]
+	path = fonts/google-fonts
+	url = https://github.com/google/fonts.git
+[submodule "fonts/noto-emoji"]
+	path = fonts/noto-emoji
+	url = https://github.com/googlei18n/noto-emoji.git
+[submodule "fonts/noto-cjk"]
+	path = fonts/noto-cjk
+	url = https://github.com/googlei18n/noto-cjk.git
