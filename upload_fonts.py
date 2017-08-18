@@ -190,6 +190,7 @@ def main():
     parser = argparse.ArgumentParser(description='Upload files to Kinto')
     parser.add_argument('--url', dest='url', action='store', help='Server URL', required=True)
     parser.add_argument('--auth', dest='auth', action='store', help='Credentials', required=True)
+    parser.add_argument('--create-collection', dest='createcoll', action='store_true', help='Tell the script that whether create the collection.')
     parser.add_argument('--force', dest='force', action='store_true', help='Actually perform actions on the server. Without this no request will be sent')
 
     args = parser.parse_args()
@@ -205,7 +206,9 @@ def main():
     if url.endswith('/'):
         url = url[:-1]
 
-    create_collection(session, url, args.force)
+    if args.createcoll:
+        print('=== create collection ===')
+        create_collection(session, url, args.force)
 
     if not url.endswith('records'):
         url += '/records'
